@@ -90,7 +90,7 @@ export default function FraudDashboard() {
   );
 
   return (
-    <div style={{minHeight:"100vh",background:"#060912",fontFamily:"'IBM Plex Mono','Courier New',monospace",color:"#e2e8f0",overflowX:"hidden"}}>
+    <div style={{minHeight:"100vh",background:"#060912",fontFamily:"'IBM Plex Mono','Courier New',monospace",color:"#e2e8f0",overflowX:"auto"}}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Syne:wght@700;800&display=swap');
         *{box-sizing:border-box;}
