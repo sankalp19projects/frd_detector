@@ -4,7 +4,7 @@ import {
   Tooltip, ResponsiveContainer, Cell, LineChart, Line
 } from "recharts";
 
-const API = "http://localhost:8766";
+const API = import.meta.env.VITE_API_URL;
 
 const RISK_COLORS = { CRITICAL:"#ff2d55", HIGH:"#ff6b2d", MEDIUM:"#ffd60a", LOW:"#30d158" };
 const RISK_BG     = { CRITICAL:"rgba(255,45,85,0.12)", HIGH:"rgba(255,107,45,0.12)", MEDIUM:"rgba(255,214,10,0.10)", LOW:"rgba(48,209,88,0.10)" };
