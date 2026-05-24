@@ -85,7 +85,7 @@ try:
             await asyncio.sleep(interval)
 
     async def main_ws():
-        async with websockets.serve(ws_handler, "localhost", 8765):
+        async with websockets.serve(ws_handler, "0.0.0.0", 8765):
             print("WebSocket server: ws://localhost:8765")
             await stream_loop()
 
@@ -174,8 +174,9 @@ class APIHandler(BaseHTTPRequestHandler):
 
 
 def run_http_server():
-    server = HTTPServer(("localhost", 8766), APIHandler)
-    print("HTTP API server: http://localhost:8766")
+    PORT = int(os.environ.get("PORT", 8766))
+    server = HTTPServer(("0.0.0.0", PORT), APIHandler)
+    print(f"HTTP API server: http://localhost:{PORT}")
     server.serve_forever()
 
 
